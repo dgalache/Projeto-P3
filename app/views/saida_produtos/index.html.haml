@@ -1,0 +1,27 @@
+%h1 Listing saida_produtos
+
+%table
+  %thead
+    %tr
+      %th Data
+      %th Utilizador
+      %th Itemproduto
+      %th Destino
+      %th
+      %th
+      %th
+
+  %tbody
+    - @saida_produtos.each do |saida_produto|
+      %tr
+        %td= saida_produto.data
+        %td= saida_produto.utilizador
+        %td= saida_produto.itemProduto
+        %td= saida_produto.destino
+        %td= link_to 'Show', saida_produto
+        %td= link_to 'Edit', edit_saida_produto_path(saida_produto)
+        %td= link_to 'Destroy', saida_produto, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Saida produto', new_saida_produto_path

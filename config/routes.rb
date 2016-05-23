@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :saida_produtos
   resources :produtos
   resources :entrada_produtos
   resources :estoques

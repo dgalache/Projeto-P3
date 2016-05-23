@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Data:
+  = @saida_produto.data
+%p
+  %b Utilizador:
+  = @saida_produto.utilizador
+%p
+  %b Itemproduto:
+  = @saida_produto.itemProduto
+%p
+  %b Destino:
+  = @saida_produto.destino
+
+= link_to 'Edit', edit_saida_produto_path(@saida_produto)
+\|
+= link_to 'Back', saida_produtos_path

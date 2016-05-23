@@ -1,0 +1,11 @@
+= simple_form_for(@saida_produto) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :data
+    = f.input :utilizador
+    = f.association :itemProduto
+    = f.association :destino
+
+  .form-actions
+    = f.button :submit
