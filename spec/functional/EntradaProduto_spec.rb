@@ -37,14 +37,14 @@ feature 'Gerenciar EntradaProduto' do
   def preencher(dados)
     fill_in 'Data Entrada',  with: dados[:data]
     fill_in 'Utilizador',  with: dados[:utilizador]
-    #select dados[:quantidade], from: "Quantidade" 
+    select dados[:quantidade], from: "Quantidade" 
     select dados[:nome], from: "ome Fornecedor"
   end
  
   def verificar(dados)
     page.should have_content "Data: #{dados[:data]}"
     page.should have_content "Utilizador: #{dados[:utilizador]}"
-    #page.should have_content "Itemproduto: #{dados[:quantidade]}"
+    page.should have_content "Itemproduto: #{dados[:quantidade]}"
     page.should have_content "Fornecedor: #{dados[:nome]}"
   end
 end

@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @produto.nome
+%p
+  %b Unidade:
+  = @produto.unidade
+%p
+  %b Setor:
+  = @produto.setor
+%p
+  %b Valor referencia:
+  = @produto.valor_referencia
+%p
+  %b Valor venda:
+  = @produto.valor_venda
+%p
+  %b Saldo:
+  = @produto.saldo
+%p
+  %b Estoque:
+  = @produto.estoque.nome
+
+= link_to 'Edit', edit_produto_path(@produto)
+\|
+= link_to 'Back', produtos_path

@@ -1,0 +1,33 @@
+%h1 Listing produtos
+
+%table
+  %thead
+    %tr
+      %th Nome
+      %th Unidade
+      %th Setor
+      %th Valor referencia
+      %th Valor venda
+      %th Saldo
+      %th Estoque
+      %th
+      %th
+      %th
+
+  %tbody
+    - @produtos.each do |produto|
+      %tr
+        %td= produto.nome
+        %td= produto.unidade
+        %td= produto.setor
+        %td= produto.valor_referencia
+        %td= produto.valor_venda
+        %td= produto.saldo
+        %td= produto.estoque.nome
+        %td= link_to 'Show', produto
+        %td= link_to 'Edit', edit_produto_path(produto)
+        %td= link_to 'Destroy', produto, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Produto', new_produto_path
