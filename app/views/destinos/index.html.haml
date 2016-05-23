@@ -1,0 +1,23 @@
+%h1 Listing destinos
+
+%table
+  %thead
+    %tr
+      %th Nome
+      %th Descricao
+      %th
+      %th
+      %th
+
+  %tbody
+    - @destinos.each do |destino|
+      %tr
+        %td= destino.nome
+        %td= destino.descricao
+        %td= link_to 'Show', destino
+        %td= link_to 'Edit', edit_destino_path(destino)
+        %td= link_to 'Destroy', destino, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Destino', new_destino_path

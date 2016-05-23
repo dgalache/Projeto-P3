@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @destino.nome
+%p
+  %b Descricao:
+  = @destino.descricao
+
+= link_to 'Edit', edit_destino_path(@destino)
+\|
+= link_to 'Back', destinos_path

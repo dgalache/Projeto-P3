@@ -1,0 +1,8 @@
+= simple_form_for(@fornecedor) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome, label:"Nome Fornecedor"
+
+  .form-actions
+    = f.submit "Salvar"

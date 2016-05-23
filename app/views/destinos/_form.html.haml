@@ -1,0 +1,9 @@
+= simple_form_for(@destino) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome, label:"Nome Estabelecimento"
+    = f.input :descricao, label:"Descrição"
+
+  .form-actions
+    = f.submit "Salvar"

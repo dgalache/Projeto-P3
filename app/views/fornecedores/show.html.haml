@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @fornecedor.nome
+
+= link_to 'Edit', edit_fornecedor_path(@fornecedor)
+\|
+= link_to 'Back', fornecedores_path
