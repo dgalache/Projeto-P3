@@ -1,0 +1,11 @@
+= simple_form_for(@entrada_produto) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :data, label:"Data Entrada"
+    = f.input :utilizador, label:"Utilizador"
+    = f.association :itemProduto, label: "Quantidade", label_method: :quantidade
+    = f.association :fornecedor, label: "Nome Fornecedor", label_method: :nome
+
+  .form-actions
+    = f.submit "Salvar"

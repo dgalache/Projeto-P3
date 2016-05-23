@@ -1,0 +1,27 @@
+%h1 Listing entrada_produtos
+
+%table
+  %thead
+    %tr
+      %th Data
+      %th Utilizador
+      %th Itemproduto
+      %th Fornecedor
+      %th
+      %th
+      %th
+
+  %tbody
+    - @entrada_produtos.each do |entrada_produto|
+      %tr
+        %td= entrada_produto.data
+        %td= entrada_produto.utilizador
+        %td= entrada_produto.itemProduto.quantidade
+        %td= entrada_produto.fornecedor.nome
+        %td= link_to 'Show', entrada_produto
+        %td= link_to 'Edit', edit_entrada_produto_path(entrada_produto)
+        %td= link_to 'Destroy', entrada_produto, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Entrada produto', new_entrada_produto_path

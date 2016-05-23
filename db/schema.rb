@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160523194938) do
+ActiveRecord::Schema.define(version: 20160523201954) do
 
   create_table "destinos", force: :cascade do |t|
     t.string   "nome"
@@ -19,6 +19,18 @@ ActiveRecord::Schema.define(version: 20160523194938) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "entrada_produtos", force: :cascade do |t|
+    t.string   "data"
+    t.string   "utilizador"
+    t.integer  "itemProduto_id"
+    t.integer  "fornecedor_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "entrada_produtos", ["fornecedor_id"], name: "index_entrada_produtos_on_fornecedor_id"
+  add_index "entrada_produtos", ["itemProduto_id"], name: "index_entrada_produtos_on_itemProduto_id"
 
   create_table "estoques", force: :cascade do |t|
     t.string   "nome"

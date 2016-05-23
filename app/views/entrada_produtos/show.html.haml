@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Data:
+  = @entrada_produto.data
+%p
+  %b Utilizador:
+  = @entrada_produto.utilizador
+%p
+  %b Itemproduto:
+  = @entrada_produto.itemProduto.quantidade
+%p
+  %b Fornecedor:
+  = @entrada_produto.fornecedor.nome
+
+= link_to 'Edit', edit_entrada_produto_path(@entrada_produto)
+\|
+= link_to 'Back', entrada_produtos_path
