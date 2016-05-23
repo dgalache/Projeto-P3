@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @estoque.nome
+
+= link_to 'Edit', edit_estoque_path(@estoque)
+\|
+= link_to 'Back', estoques_path

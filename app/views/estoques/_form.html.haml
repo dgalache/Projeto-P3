@@ -1,0 +1,8 @@
+= simple_form_for(@estoque) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome, label:"Nome"
+
+  .form-actions
+    = f.submit "Salvar"
